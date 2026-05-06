@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Frappe Smart Translator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="popup-root">
+
+    <!-- ── Header ─────────────────────────────────────────── -->
+    <header class="popup-header">
+      <div class="logo-mark">
+        <div class="logo-icon">
+          <span class="logo-globe">🌐</span>
+        </div>
+        <div class="logo-text">
+          <span class="logo-title">Frappe</span>
+          <span class="logo-subtitle">Smart Translator</span>
+        </div>
+      </div>
+      <div class="version-badge">v1.0</div>
+    </header>
+
+    <!-- ── Status Bar ─────────────────────────────────────── -->
+    <div class="status-bar" id="statusBar">
+      <span class="status-dot" id="statusDot"></span>
+      <span class="status-text" id="statusText">Detecting page…</span>
+    </div>
+
+    <!-- ── Toggle Card ────────────────────────────────────── -->
+    <div class="card toggle-card">
+      <div class="card-row">
+        <div class="card-label">
+          <span class="card-icon">⚡</span>
+          <span>Enable Translator</span>
+        </div>
+        <label class="toggle-switch" aria-label="Enable or disable translator">
+          <input type="checkbox" id="enableToggle" />
+          <span class="toggle-track">
+            <span class="toggle-thumb"></span>
+          </span>
+        </label>
+      </div>
+    </div>
+
+    <!-- ── Language Card ──────────────────────────────────── -->
+    <div class="card language-card">
+      <div class="card-label mb-8">
+        <span class="card-icon">🗣️</span>
+        <span>Target Language</span>
+      </div>
+      <div class="lang-grid" id="langGrid" role="radiogroup" aria-label="Select language">
+        <!-- Injected by popup.js -->
+      </div>
+    </div>
+
+    <!-- ── Actions ────────────────────────────────────────── -->
+    <div class="actions">
+      <button class="btn btn-primary" id="translateBtn">
+        <span class="btn-icon">✨</span>
+        <span>Translate Page</span>
+      </button>
+      <button class="btn btn-ghost" id="clearCacheBtn" title="Clear cached translations">
+        <span class="btn-icon">🗑️</span>
+        <span>Clear Cache</span>
+      </button>
+    </div>
+
+    <!-- ── Toast ──────────────────────────────────────────── -->
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <!-- ── Footer ─────────────────────────────────────────── -->
+    <footer class="popup-footer">
+      <span>Powered by Alpha</span>
+      <span class="footer-dot">·</span>
+      <span>Frappe / ERPNext also other projects</span>
+    </footer>
+
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
