@@ -139,4 +139,3 @@ To use Google Translate instead of MyMemory:
 ## 📄 License
 
 MIT — free to use, modify, and build your SaaS product on top of.
-# Frappe-smart-translator-chrome-extension
